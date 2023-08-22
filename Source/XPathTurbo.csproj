@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<ProjectGuid>{fde99c2b-c069-4200-8201-7b07517758ea}</ProjectGuid>
+		<RootNamespace>XPathTurbo</RootNamespace>
+		<AssemblyName>XPathTurbo</AssemblyName>
+		<OutputType>Library</OutputType>
+		<TargetFramework>net472</TargetFramework>
+		<TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+		<PlatformTarget>x64</PlatformTarget>
+		<AppDesignerFolder>Properties</AppDesignerFolder>
+		<DebugSymbols>false</DebugSymbols>
+		<Optimize>true</Optimize>
+		<WarningLevel>4</WarningLevel>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		<Deterministic>true</Deterministic>
+		<OutputPath>..\$(Configuration)\Core\Assemblies\</OutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Include="HarmonyPatches\HarmonyHandler.cs" />
+		<Compile Include="Mod\XPathTurbo.cs" />
+		<Compile Include="Report.cs" />
+		<Compile Include="Mod\Settings.cs" />
+		<Compile Include="Properties\AssemblyInfo.cs" />
+		<Reference Include="System" />
+		<Reference Include="System.Xml" />
+		<PackageReference Include="Krafs.Publicizer" Version="2.2.1">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Lib.Harmony" Version="2.2.2" ExcludeAssets="runtime" />
+		<Reference Include="Assembly-CSharp">
+			<HintPath Condition="$([MSBuild]::IsOSPlatform('Windows'))">..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+			<HintPath Condition="$([MSBuild]::IsOSPlatform('Linux'))">..\..\..\RimWorldLinux_Data\Managed\Assembly-CSharp.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="UnityEngine.CoreModule">
+			<HintPath Condition="$([MSBuild]::IsOSPlatform('Windows'))">..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+			<HintPath Condition="$([MSBuild]::IsOSPlatform('Linux'))">..\..\..\RimWorldLinux_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="UnityEngine.TextRenderingModule">
+			<HintPath Condition="$([MSBuild]::IsOSPlatform('Windows'))">..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+			<HintPath Condition="$([MSBuild]::IsOSPlatform('Linux'))">..\..\..\RimWorldLinux_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+	</ItemGroup>
+	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

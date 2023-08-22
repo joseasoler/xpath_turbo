@@ -1,0 +1,13 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{fde99c2b-c069-4200-8201-7b07517758ea}") = "XPathTurbo", "XPathTurbo.csproj", "{fde99c2b-c069-4200-8201-7b07517758ea}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		1.4|x64 = 1.4|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{fde99c2b-c069-4200-8201-7b07517758ea}.1.4|x64.ActiveCfg = 1.4|x64
+		{fde99c2b-c069-4200-8201-7b07517758ea}.1.4|x64.Build.0 = 1.4|x64
+	EndGlobalSection
+EndGlobal

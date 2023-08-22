@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+	<XT_DebugLogLabel>Debug log</XT_DebugLogLabel>
+	<XT_DebugLogHover>Display additional messages in the log. Useful for debugging bugs.</XT_DebugLogHover>
+	<XT_ResetSettingsLabel>Reset</XT_ResetSettingsLabel>
+	<XT_ResetSettingsHover>Reset all options of the mod to their default values.</XT_ResetSettingsHover>
+</LanguageData>
